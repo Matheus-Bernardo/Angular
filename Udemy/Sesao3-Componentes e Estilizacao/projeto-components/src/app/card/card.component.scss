@@ -20,3 +20,14 @@
   
 
 }
+/*
+Componente do angular material, está comentando em card.component.html
+
+:host ::ng-deep mat-slider .mdc-slider__track--active_fill{
+  border-color: yellowgreen !important;
+}
+  */
+
+.emulated{
+    background-color: red;
+}  

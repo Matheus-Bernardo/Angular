@@ -20,3 +20,7 @@
    
 
 }
+
+:host ::ng-deep .card-cancel-button{
+    background-color: darkmagenta !important;
+}
