@@ -1,0 +1,22 @@
+<input 
+    id ="meu-input" 
+    [value]="inputText"
+    [type]="inputType"
+    [disabled]="isDisabled" 
+    (keyup) = "handleInputKeyup($event)"/>
+<br>
+
+<button (click)="enableInput()">Habilitar</button> <!-- event binding--> 
+<button (click)="disabledInput()">Desabilitar</button>
+
+<br>
+
+<button (click)="setTypeSenha()">Alterar para senha</button>
+<button (click)="setTypeText()">Alterar para texto</button>
+
+<br>
+
+<button (click)="logInputText()">log</button>
+<br>
+<button [attr.title]="buttonTitle">teste</button> <!-- atribute binding-->  
+<button [attr.disabled]="buttonDisable ? true : null">Disabled</button> 
