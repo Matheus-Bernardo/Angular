@@ -21,5 +21,11 @@ export class AppComponent {
   }
   buttonTitle = 'titulo do botão';
   buttonDisable = true;
+  widthButton1 = '110px';
+  backgroundColorBtn1 = "red";
+  estilosBotaoTeste ={
+    width : '110px',
+    backgroundColor : "green"
+  }
 
 }
