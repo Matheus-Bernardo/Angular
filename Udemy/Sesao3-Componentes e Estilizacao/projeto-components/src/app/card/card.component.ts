@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 interface IPlano{
   infos: IInfos;
@@ -16,11 +16,20 @@ interface IInfos {
 })
 export class CardComponent {
  //@ts-ignore
- plano :IPlano= {
-  infos: {
-    tipo : 'Simples',
-    preco:100
+  @Input() planPrice: number = 0;
+
+  private _planType : string = '';
+
+  @Input('planTypeAlias') 
+  set planType(value:string){
+    this._planType = value.toUpperCase();
+  }
+  get planType():string{
+    return this._planType;
   }
 
- };
+  buttonClicked(valueEmitted:boolean){
+    console.log('buttonClicked',valueEmitted)
+    console.log('planType', this.planType)
+  }
 }
