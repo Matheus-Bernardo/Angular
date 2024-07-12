@@ -1,0 +1,16 @@
+<div class="list">
+
+  <app-person 
+  *ngFor=
+      "let person of listPeople;
+      let i = index;
+      let isOdd = odd; "
+    [personName] = "person.name"
+    [personAge] = "person.age"
+    [personIndex] = "i"
+    [isOdd] = "isOdd"
+    [isSelected] = "personSelectIndex === i"
+    (personSelected) = "selectPerson($event)"
+  ></app-person>
+  
+</div>
